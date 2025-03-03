@@ -1,5 +1,21 @@
-<h1>Coach's Answer</h1>
-<p><strong>Your question:</strong> <%= @question %></p>
-<p><strong>Coach's answer:</strong> <%= @answer %></p>
+<div class="container mt-5">
+  <h1 class="display-4 text-center">Stupid Coaching</h1>
 
-<%= link_to "Ask another question", ask_path %>
+  <div class="card mt-4">
+    <div class="card-body">
+      <blockquote class="blockquote">
+        <p><%= @question %></p>
+        <footer class="blockquote-footer">You</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="alert alert-warning mt-3">
+    <strong><%= @answer %></strong>
+    <footer class="blockquote-footer">Your coach</footer>
+  </div>
+
+  <div class="text-center mt-4">
+    <%= link_to "Ask a new question", ask_path, class: "btn btn-outline-primary" %>
+  </div>
+</div>
